@@ -12,12 +12,12 @@ function handleClick(id: number){
   axios(`${BASE_URL}/sales/${id}/notification`)
     .then(response => {
       toast.info("SMS enviado com Sucesso");
-    })
+    });
 }
 
 function NotificationButton({saleId}: Props) {
     return(
-        <div className="dsmeta-red-btn" onClick={() => handleClick(saleId)}>
+        <div className="dsmeta-red-btn" onClick={() => {handleClick(saleId)}}>
         <img src={icom} alt="Notificar" />
       </div>
 
